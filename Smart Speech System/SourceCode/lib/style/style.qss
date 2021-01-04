@@ -1,0 +1,201 @@
+
+*{
+    font: "微软雅黑";
+    color: rgb(30, 30, 30);
+    background-color: rgb(250, 250, 250);
+    /* border-radius: 2px;
+    padding: 3px;
+    margin: 2px; */
+}
+/****************定义边框*****************/
+/* QLineEdit, QPushButton, QTimeEdit,
+QSpinBox, QDoubleSpinBox, QComboBox,
+QDateEdit, QDateTimeEdit, QGroupBox,
+QTextEdit, QTabWidget {
+    border:1px solid rgb(36, 36, 36);
+} */
+/*************菜单下拉按钮*****************/
+QMenu::item {
+    background-color: transparent;
+}
+/********菜单下拉按钮（被选择时）***********/
+QMenu::item:selected {
+    background-color: rgb(100, 100, 100);
+}
+/****************定义菜单栏***************/
+QMenuBar {
+    border-radius: 0;
+    background-color: rgb(72, 72, 72);
+    border-bottom: 1px solid rgb(36, 36, 36);
+}
+/************菜单栏按钮（被选择时）********/
+QMenuBar::item:selected {
+    background-color: rgb(100, 100, 100);
+}
+/************菜单栏按钮（鼠标悬停）********/
+QMenu:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+/**********toolButton**********/
+QToolButton {
+    border-style: inset;
+    /* background-color: rgb(255, 231, 217); */
+    /* qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(150, 140, 120, 255), stop:1 rgba(255, 231, 217, 255)); */
+    border:1px solid rgb(150, 150, 150);
+    border-radius: 3px;
+    /* min-width: 5em; */
+    /* min-height: 2em; */
+    /* padding: 6px 6px; */
+    /* margin: 5px */
+}
+/*********按钮（渐变：突出显示）***********/
+QPushButton {
+    font-family: "Microsoft YaHei";
+    font-size: 11px;
+    border-style: inset;
+    /* background-color: rgb(255, 231, 217); */
+    /* qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(150, 140, 120, 255), stop:1 rgba(255, 231, 217, 255)); */
+    border:1px solid rgb(150, 150, 150);
+    border-radius: 3px;
+    /* min-width: 5em; */
+    /* min-height: 2em; */
+    /* padding: 6px 6px; */
+    /* margin: 5px */
+}
+/**************按钮（鼠标悬停）**********/
+QPushButton:hover {
+    background-color: rgba(255, 231, 217, 200);
+}
+/**************按钮（按下）*************/
+QPushButton:pressed  {
+    background-color: rgb(210, 210, 190);
+}
+QSpinBox::up-button, QTimeEdit::up-button,
+QDateEdit::up-button, QDateTimeEdit::up-button,
+QDoubleSpinBox::up-button {
+    subcontrol-position: right;
+    border: 0px;
+}
+QSpinBox::down-button, QTimeEdit::down-button,
+QDateEdit::down-button, QDateTimeEdit::down-button,
+QDoubleSpinBox::down-button {
+    subcontrol-position: left;
+    border: 0px;
+}
+QSpinBox::up-arrow, QTimeEdit::up-arrow,
+QDateEdit::up-arrow, QDateTimeEdit::up-arrow,
+/*
+QDoubleSpinBox::up-arrow {
+    image: url(image/right.png);
+}
+*/
+QSpinBox::down-arrow, QTimeEdit::down-arrow,
+QDateEdit::down-arrow, QDateTimeEdit::down-arrow,
+/*
+QDoubleSpinBox::down-arrow {
+    image: url(image/left.png);
+}
+*/
+/*********定义Slider槽的形态**************/
+QSlider::groove:horizontal {
+    height: 6px;
+    border-radius: 3px;
+}
+/*********定义Slider柄的形态**************/
+QSlider::handle:horizontal {
+    background-color: rgb(68, 68, 68);
+    border-radius: 5px;
+    border: 2px solid rgb(36, 36, 36);
+    height: 8px;
+    width: 8px;
+    margin: -3px -3px;
+}
+/*********定义handle右边的背景**************/
+QSlider::add-page:horizontal{
+    background: rgb(240, 240, 240);
+}
+/*********定义handle左边的背景**************/
+QSlider::sub-page:horizontal{
+    background: rgb(200, 200, 200);
+}
+/****************定义进度条****************/
+QProgressBar {
+    border: 2px solid grey;
+    border-radius: 5px;
+    text-align: center;
+    height: 12px;
+}
+/*************定义进度条背景**************/
+QProgressBar::chunk {
+    background-color: rgb(128, 128, 128);
+    width: 8px;
+    margin: 0.5px;
+}
+/* 
+QTabWidget {
+    background-color: rgb(150, 150, 100);
+} */
+
+QTabWidget::pane {
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 3px;
+    /* background: rgb(150, 100, 100); */
+}
+QTabWidget::tab-bar {
+    /* border: 1px solid rgb(36, 36, 36); */
+    background-color: rgb(100, 100, 100);
+}
+QTabBar::tab {
+    /* background: rgb(255, 240, 231); */
+    font-family: "Microsoft YaHei";
+    font-size: 11px;
+    background: rgb(255, 241, 231);
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 3px;
+    /* min-width: 12ex;
+    min-height: 6ex; */
+    padding: 2px 4px;
+}
+QTabBar::tab:selected, QTabBar::tab:hover {
+    /* border-top: 2px solid red; */
+    font-family: "Microsoft YaHei";
+    font-size: 11px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 3px;
+    padding-top: 3px;
+    border-bottom-color: rgb(255, 240, 231); /*same as the pane color */
+}
+/*************QComboBox******************/
+QComboBox {
+    border-style: inset;
+    font-family: "Microsoft YaHei";
+    font-size: 11px;
+    /* background-color: rgb(255, 231, 217); */
+    /* qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(150, 140, 120, 255), stop:1 rgba(255, 231, 217, 255)); */
+    border:1px solid rgb(150, 150, 150);
+    border-radius: 3px;
+    /* min-width: 5em; */
+    /* min-height: 2em; */
+}
+
+QComboBox::drop-down {
+    /* border-style: inset; */
+    /* background: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(150, 140, 120, 255), stop:1 rgba(255, 231, 217, 255)); */
+    /* border:1px solid rgb(36, 36, 36); */
+    /* border-radius: 3px; */
+    /* min-width: 5em; */
+    /* min-height: 2em; */
+    /* padding: 6px 6px; */
+    /* margin: 5px */
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border: 0px;
+}
+
+QLabel {
+    background: transparent;
+    font-family: "Microsoft YaHei";
+    font-size: 11px;
+}
